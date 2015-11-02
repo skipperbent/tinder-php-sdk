@@ -15,6 +15,70 @@ Add the latest version of tinder-php-sdk to your ```composer.json```
 }
 ```
 
+## Examples
+
+This section contains basic examples on how to use the SDK.
+
+### Authentication
+
+```php
+$tinder = new \Pecee\Http\Service\Tinder($fbUserId, $fbToken);
+```
+
+### Get user info
+
+```php
+$tinder->getUser();
+```
+
+### Send message
+
+```php
+$tinder->sendMessage($userId, $message);
+```
+
+### Report user
+
+```php
+$tinder->reportUser($userId);
+```
+
+### Update profile
+
+```php
+$tinder->updateProfile(array('age_filter_min' => 26, 'gender' => 1, 'age_filter_max' => 18, 'distance_filter' => 14);
+```
+
+### Update location
+
+```php
+$tinder->updateLocation($lat, $lon);
+```
+
+### Like user
+
+```php
+$tinder->like($userId);
+```
+
+### Pass/dislike user
+
+```php
+$tinder->pass($userId);
+```
+
+### Get updates
+
+```php
+$tinder->updates();
+```
+
+### Get recommendations 
+
+```php
+$tinder->recommendations();
+```
+
 ## The MIT License (MIT)
 
 Copyright (c) 2015 Simon Sessingø / simple-php-router
