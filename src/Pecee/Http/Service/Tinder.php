@@ -77,12 +77,16 @@ class Tinder extends RestBase {
         return $this->api('like/' . $userId);
     }
 
+	public function superLike($userId) {
+		return $this->api('like/' . $userId .'/super/');
+	}
+
     public function pass($userId) {
         return $this->api('pass/' . $userId);
     }
 
     public function updates() {
-        return $this->api('updates');
+        return $this->api('updates', self::METHOD_POST);
     }
 
     public function recommendations() {
