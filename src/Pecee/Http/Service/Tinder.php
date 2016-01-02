@@ -57,6 +57,10 @@ class Tinder extends RestBase {
         }
     }
 
+	public function meta() {
+		return $this->api('meta');
+	}
+
     public function reportUser($userId, $causeId) {
         return $this->api('report/' . $userId, self::METHOD_POST, array('cause' => $causeId));
     }
@@ -77,12 +81,16 @@ class Tinder extends RestBase {
         return $this->api('like/' . $userId);
     }
 
+	public function superLike($userId) {
+		return $this->api('like/' . $userId .'/super/');
+	}
+
     public function pass($userId) {
         return $this->api('pass/' . $userId);
     }
 
-    public function updates() {
-        return $this->api('updates');
+    public function updates($lastActivityTime = '') {
+        return $this->api('updates', self::METHOD_POST, array('last_activity_date' => $lastActivityTime));
     }
 
     public function recommendations() {
