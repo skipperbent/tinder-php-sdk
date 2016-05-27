@@ -7,10 +7,7 @@ Add the latest version of tinder-php-sdk to your ```composer.json```
 ```json
 {
     "require": {
-        "pecee/tinder-php-sdk": "1.*"
-    },
-    "require-dev": {
-        "pecee/tinder-php-sdk": "1.*"
+        "pecee/tinder-sdk": "1.*"
     }
 }
 ```
