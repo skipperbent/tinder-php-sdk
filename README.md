@@ -91,6 +91,8 @@ $tinder->updates();
 
 ### Get recommendations 
 
+Get users and groups (Tinder Social) recommendations.
+
 ```php
 $tinder->recommendations();
 ```

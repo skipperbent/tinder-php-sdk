@@ -39,10 +39,11 @@ class Tinder extends RestBase {
         $this->httpRequest->setHeaders(array(
             'X-Auth-Token: '. $this->authToken,
             'Content-type: application/json; charset=utf-8',
-            'app_version: 3',
+            'app_version: 1637',
             'platform: ios',
             'User-Agent: Tinder/2.2.2 (iPhone; iOS 7.0.2; Scale/2.00)',
-            'os_version: 700001'
+            'os_version: 700001',
+            'app-version: 1637'
         ));
 
         return json_decode(parent::api($url, $method, $data)->getResponse());
