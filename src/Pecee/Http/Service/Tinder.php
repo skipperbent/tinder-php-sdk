@@ -49,12 +49,14 @@ class Tinder extends RestBase {
     }
 
 
-    protected function authenticate() {
+    protected function authenticate(
+    ) 
+    {
         $response = $this->api('auth', self::METHOD_POST, array('facebook_token' => $this->fbToken, 'facebook_id' => (int)$this->fbUserId));
-        if($response && isset($response->token)) {
-            $this->authToken = $response->token;
-            $this->user = $response->user;
-        }
+        if($response && isset($response->token)) 
+	{
+            $this->authToken = $response->token;$this->user = $response->user;
+  }
     }
 
 	public function meta() {
