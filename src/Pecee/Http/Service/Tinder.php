@@ -97,6 +97,14 @@ class Tinder extends RestBase {
         return $this->api('user/recs');
     }
 
+    public function friends() {
+        return $this->api('group/friends');
+    }
+
+    public function user($userId) {
+        return $this->api('user/' . $userId);
+    }
+
     /**
      * @return object|null
      */
